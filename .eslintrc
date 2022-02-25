@@ -1,0 +1,137 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:jest/recommended",
+    "plugin:promise/recommended",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint", "eslint-comments", "jest", "promise", "import", "prettier"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./src"],
+        "extensions": [".ts"]
+      }
+    }
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/ban-ts-comment": "error",
+    "prettier/prettier": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": ["src"],
+        "patterns": ["src/*", "../*"]
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "never",
+        "groups": ["builtin", "external", "internal", "index", "sibling", "parent"],
+        "pathGroups": [
+          {
+            "pattern": "express",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "express-*",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "mongoose",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "~types/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~config/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~db/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~models/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~router/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~services/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~utils/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~helpers/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~middleware/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~api/routes/*",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~api/controllers/*",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~api/validators/*",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "~tests/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["internal"]
+      }
+    ],
+    "no-console": ["warn", { "allow": ["error", "warn", "debug"] }]
+  }
+}

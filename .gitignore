@@ -1,0 +1,26 @@
+# Build directories
+/dist
+
+# Environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Logs
+/logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+/node_modules
+
+# Cache
+*.tsbuildinfo
+.npm
+.eslintcache
+
+# Other
+.DS_Store
+/.husky/_

@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "lib": ["es2015"],
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "./dist",
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "~types/*": ["src/types/*"],
+      "~config/*": ["src/config/*"],
+      "~db/*": ["src/db/*"],
+      "~models/*": ["src/models/*"],
+      "~router/*": ["src/router/*"],
+      "~services/*": ["src/services/*"],
+      "~utils/*": ["src/utils/*"],
+      "~helpers/*": ["src/helpers/*"],
+      "~middleware/*": ["src/middleware/*"],
+      "~routes/*": ["src/api/routes/*"],
+      "~controllers/*": ["src/api/controllers/*"],
+      "~validators/*": ["src/api/validators/*"],
+      "~tests/*": ["src/tests/*"]
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths"
+      }
+    ],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
