@@ -4,12 +4,6 @@
 
 <br/>
 
-## 🌍 API Link
-
-<a href="https://argus-backend.herokuapp.com/">argus-backend.herokuapp.com/</a>
-
-<br/>
-
 ## 🚀 Quick Start
 
 **Installation**

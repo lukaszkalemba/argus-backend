@@ -15,8 +15,13 @@ const VehicleSchema = new Schema({
     enum: ['SUV', 'Truck', 'Hybrid'],
     required: [true, 'Vehicle type is required'],
   },
-  lastGeoLocation: {
-    type: [Number],
+  lat: {
+    type: Number,
+    required: [true, 'Coordinates are required'],
+  },
+  lng: {
+    type: Number,
+    required: [true, 'Coordinates are required'],
   },
   lastConnection: {
     type: Date,
